@@ -1,0 +1,38 @@
+[project]
+name = "bytely"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.18",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+]
+
+# RUFF configs
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+# Enable rules
+lint.select = ["E", "F", "I", "N", "UP", "B", "C90", "RUF"]
+
+lint.ignore = [
+    "E501",     # line too long
+    "RUF001",   # ambiguous unicode character in code
+    "RUF002",   # ambiguous unicode character in docstring
+]  
+
+# Paths to exclude
+exclude = ["migrations", "__pycache__", ".venv", "alembic"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
