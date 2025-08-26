@@ -15,3 +15,10 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+
+
+## Database Design
+
+- links(id, short_code, long_url, expires_at NULL, owner_id NULL, click_count, created_at)
+- users(id, email, password, first_name, last_name, is_premium, is_active, joined_at, updated_at)

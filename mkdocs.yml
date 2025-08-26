@@ -3,7 +3,6 @@ site_url: https://bytely.com
 nav:
   - Home: index.md
   - About: about.md
-  - Strategy: strategy.md
 theme:
   name: material
   palette: 
