@@ -22,3 +22,9 @@ class TimeStampMixin:
     updated_at: Mapped[DateTime] = mapped_column(
         DateTime(timezone=True), default=func.now(), onupdate=func.now()
     )
+
+
+in_memory_db = {
+    "links": {},
+    "users": {},
+}
