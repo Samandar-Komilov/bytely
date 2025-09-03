@@ -7,8 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "alembic>=1.16.4",
     "fastapi[standard]>=0.116.1",
-    "mkdocs>=1.6.1",
-    "mkdocs-material>=9.6.18",
+    "gunicorn>=23.0.0",
     "psycopg2-binary>=2.9.10",
     "python-dotenv>=1.1.1",
     "sqlalchemy>=2.0.43",

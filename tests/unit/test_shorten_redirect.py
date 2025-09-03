@@ -1,9 +1,9 @@
-import sys
-
 from fastapi.testclient import TestClient
+
 from app.main import app
 
 client = TestClient(app)
+
 
 def test_shorten_and_redirect():
     # create short link

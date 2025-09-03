@@ -1,10 +1,11 @@
-from sqlalchemy import create_engine, DateTime, func
-from sqlalchemy.orm import sessionmaker, DeclarativeBase, Mapped, mapped_column
+from sqlalchemy import DateTime, create_engine, func
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
-from app.core.settings import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
+from app.core.settings import DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DB_USER
 
-
-DATABASE_URL = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+DATABASE_URL = (
+    f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+)
 
 engine = create_engine(DATABASE_URL)
 

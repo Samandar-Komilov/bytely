@@ -16,6 +16,6 @@ class User(Base, TimeStampMixin):
 
     def __str__(self):
         return f"User(email={self.email})"
-    
+
     def __repr__(self):
         return self.__str__()

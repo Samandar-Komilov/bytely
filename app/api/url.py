@@ -2,16 +2,13 @@ import logging
 
 from fastapi import APIRouter
 
-from app.schemas import URLShortenIn
 from app.core.database import in_memory_db
+from app.schemas import URLShortenIn
 
 logger = logging.getLogger(__name__)
 
 
-router = APIRouter(
-    prefix="/urls",
-    tags=["urls"]
-)
+router = APIRouter(prefix="/urls", tags=["urls"])
 
 
 @router.post("/shorten")
