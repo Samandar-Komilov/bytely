@@ -1,11 +1,13 @@
 services:
   web:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.prod
     ports:
       - "8006:8000"
     env_file:
       - .env
-    command: sh -c "./entrypoint.prod.sh"
+    command: sh -c "./scripts/entrypoint.prod.sh"
     restart: always
     depends_on:
       db:
